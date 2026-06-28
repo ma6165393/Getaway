@@ -9,6 +9,7 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     min-height: 100vh;
+    padding: 20px;
 
     display: flex;
     justify-content: center;
@@ -16,8 +17,9 @@ body {
 }
 
 .hero {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
+    margin: auto;
 
     display: flex;
     align-items: center;
@@ -30,9 +32,11 @@ body {
 }
 
 .image-box h1 {
-display: flex;
-justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
+
 .image-box img {
     width: 100%;
     border-radius: 12px;
@@ -67,4 +71,44 @@ button {
 
 button:hover {
     transform: translateY(-3px);
+}
+
+/* Responsive للموبايل */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .image-box,
+    .content {
+        width: 100%;
+    }
+
+    .image-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .image-box img {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    button {
+        width: 100%;
+        max-width: 320px;
+    }
 }
